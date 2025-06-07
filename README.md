@@ -108,9 +108,12 @@ docker pull tomcat
 ```bash
 docker images
 ```
-
-![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/6.png)
-![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/7.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/6.png" alt="Header">
+</p>
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/7.png" alt="Header">
+</p>
 
 Команда docker run -itd --name webapp -p 8080:8080 tomcat запускает контейнер из образа Tomcat в фоновом режиме с пробросом порта. На данном этапе я столкнулся с первой проблемой, а именно с ошибкой "HTTP Status 404 - Not Found". Пробовал многое, но оказалось всё очень просто. Дело в том, что TomCat не может найти каталог webapps.dist, соответственно доступ к веб-странице невозможен. Чтобы решить данную проблему, нужно переместить веб-приложение на webapps.dist.
 
