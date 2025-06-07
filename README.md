@@ -133,11 +133,15 @@ exit
 
 ---
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/9.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/9.png" alt="Header">
+</p>
 
 Можно увидеть готовый результат странички Apache
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/10.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/10.png" alt="Header">
+</p>
 
 NGINX запускается без проблем
 
