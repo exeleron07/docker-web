@@ -49,12 +49,20 @@ Dockerfile создает образ на основе Ubuntu 16.04 с веб-с
 
 ## Подробный обзор поднятия Web на Ubuntu
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/47f5789baa2e1122a409248b73b3a6ed38da8b43/img/1.png)
+![image_alt](https://github.com/exeleron07/docker-web/blob/371a9cb138db046a9b2582c7b0b26335545f9c4b/img/1-1.png)
 
-Команда docker run hello-world запускает контейнер из официального образа hello-world, который предназначен для проверки корректной работы Docker:
+Команда sudo systemctl status docker сообщает о состоянии докера. Перед этим не забудьте установить его для Ubuntu (команды прикрепляю):
 
 ```bash
-docker run hello-world
+sudo systemctl status docker
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce -y
+sudo systemctl start docker
+sudo systemctl enable docker
 ```
 
 ---
