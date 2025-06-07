@@ -49,7 +49,9 @@ Dockerfile создает образ на основе Ubuntu 16.04 с веб-с
 
 ## Подробный обзор поднятия Web на Ubuntu
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/371a9cb138db046a9b2582c7b0b26335545f9c4b/img/1-1.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/371a9cb138db046a9b2582c7b0b26335545f9c4b/img/1-1.png" alt="Header">
+</p>
 
 Команда sudo systemctl status docker сообщает о состоянии докера. Перед этим не забудьте установить его для Ubuntu (команды прикрепляю):
 
