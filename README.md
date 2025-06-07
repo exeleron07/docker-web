@@ -81,8 +81,13 @@ sudo usermod -aG docker $USER
 
 ---
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/887986b29a480f3dc94e6c0988ceca42e8d3797b/img/3.png)
-![image_alt](https://github.com/exeleron07/docker-web/blob/887986b29a480f3dc94e6c0988ceca42e8d3797b/img/4.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/887986b29a480f3dc94e6c0988ceca42e8d3797b/img/3.png" alt="Header">
+</p>
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/887986b29a480f3dc94e6c0988ceca42e8d3797b/img/4.png" alt="Header">
+</p>
+
 
 Команда docker search tomcat ищет официальные и сторонние образы Apache Tomcat в Docker Hub (публичном репозитории Docker). Команда docker pull tomcat загружает официальный образ Apache Tomcat из Docker Hub на ваш локальный компьютер (что нам и нужно):
 
