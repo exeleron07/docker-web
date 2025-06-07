@@ -48,7 +48,7 @@ EXPOSE 80
 
 ## Изображения и примеры из практики
 
-![1](https://raw.githubusercontent.com/exeleron01/docker-web/commit/1.png)
+![image_alt](https://github.com/exeleron07/docker-web/blob/47f5789baa2e1122a409248b73b3a6ed38da8b43/img/1.png)
 
 Добавление пользователя в группу docker:
 
