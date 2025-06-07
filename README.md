@@ -98,6 +98,35 @@ docker pull tomcat
 docker images
 ```
 
+![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/6.png)
+![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/7.png)
+
+Команда docker run -itd --name webapp -p 8080:8080 tomcat запускает контейнер из образа Tomcat в фоновом режиме с пробросом порта. На данном этапе я столкнулся с первой проблемой, а именно с ошибкой "HTTP Status 404 - Not Found". Пробовал многое, но оказалось всё очень просто. Дело в том, что TomCat не может найти каталог webapps.dist, соответственно доступ к веб-странице невозможен. Чтобы решить данную проблему, нужно переместить веб-приложение на webapps.dist.
+
+```bash
+docker run -itd --name webapp -p 8080:8080 tomcat
+docker ps
+docker exec -it 38330ad620e1 /bin/bash
+ls
+cd webapps.dist/
+ls
+cp -R * ../webapps
+cd ..
+cd webapps
+ls
+exit
+```
+
+---
+
+![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/9.png)
+
+Можно увидеть готовый результат странички Apache
+
+![image_alt](https://github.com/exeleron07/docker-web/blob/488d243e4a55d8eac979d5ecf023b31fb575eb20/img/10.png)
+
+NGINX запускается без проблем
+
 ---
 
 Результат:
@@ -105,5 +134,6 @@ docker images
 ```
 REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
 tomcat       latest    c457807be805   5 days ago     462MB
+nginx        latest    7f553e8bbc89   13 days ago    192MB
 hello-world  latest    d2c94e258dcb   17 months ago  13.3kB
 ```
