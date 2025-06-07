@@ -69,7 +69,9 @@ sudo systemctl enable docker
 
 ---
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/ca8cdca113d28741e4d0c0169f8cf5a6d9ea06b1/img/2-2.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/ca8cdca113d28741e4d0c0169f8cf5a6d9ea06b1/img/2-2.png" alt="Header">
+</p>
 
 Команда sudo usermod -aG docker $USER добавляет текущего пользователя в группу docker, чтобы можно было управлять Docker без постоянного использования sudo:
 
