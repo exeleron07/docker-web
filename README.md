@@ -99,7 +99,9 @@ docker pull tomcat
 
 ---
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/a0b66b741f613853bb25009f29fb1e9e86cf3958/img/5.png)
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/a0b66b741f613853bb25009f29fb1e9e86cf3958/img/5.png" alt="Header">
+</p>
 
 Команда docker images выводит список всех Docker-образов, которые есть в локальном хранилище вашей системы. Проверяем наличие tomcat
 
