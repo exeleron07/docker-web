@@ -67,12 +67,12 @@ sudo systemctl enable docker
 
 ---
 
-![image_alt](https://github.com/exeleron07/docker-web/blob/8355692585723176a9b3c245f2a7f1a9db34f09a/img/2.png)
+![image_alt](https://github.com/exeleron07/docker-web/blob/ca8cdca113d28741e4d0c0169f8cf5a6d9ea06b1/img/2-2.png)
 
-Команда docker images выводит список всех Docker-образов, которые есть в локальном хранилище вашей системы. В данном случае убедимся, что естьв images hello-world:
+Команда sudo usermod -aG docker $USER добавляет текущего пользователя в группу docker, чтобы можно было управлять Docker без постоянного использования sudo:
 
 ```bash
-docker images
+sudo usermod -aG docker $USER
 ```
 
 ---
