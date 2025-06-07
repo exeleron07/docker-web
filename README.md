@@ -1,7 +1,6 @@
-# Docker-практика на Ubuntu
+# Docker-Web на Ubuntu
 
-В этом проекте демонстрируется работа с Docker: запуск, создание собственных образов, изменение контейнеров, commit, tag и прочее.
-
+В этом проекте демонстрируется работа с Docker: поднятие Web
 ---
 
 ## Основные команды Docker
@@ -44,16 +43,18 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
 ```
 
+Dockerfile создает образ на основе Ubuntu 16.04 с веб-сервером Apache2, который отображает простое сообщение "Hello World from Docker!"
+
 ---
 
-## Изображения и примеры из практики
+## Подробный обзор поднятия Web на Ubuntu
 
 ![image_alt](https://github.com/exeleron07/docker-web/blob/47f5789baa2e1122a409248b73b3a6ed38da8b43/img/1.png)
 
-Добавление пользователя в группу docker:
+Команда docker run hello-world запускает контейнер из официального образа hello-world, который предназначен для проверки корректной работы Docker:
 
 ```bash
-sudo usermod -aG docker SUSER
+docker run hello-world
 ```
 
 ---
