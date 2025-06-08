@@ -155,3 +155,18 @@ tomcat       latest    c457807be805   5 days ago     462MB
 nginx        latest    7f553e8bbc89   13 days ago    192MB
 hello-world  latest    d2c94e258dcb   17 months ago  13.3kB
 ```
+## Создание своего Docker image
+
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/66b51e3aa9ba670ec621a07d7800030264c6849f/img/11.png" alt="Header">
+</p>
+
+Создаём директорию mydocker, переходим в неё и после чего редактируем файл через nano
+
+```bash
+mkdir mydocker
+cd mydocker
+nano Dockerfile
+```
+
+
