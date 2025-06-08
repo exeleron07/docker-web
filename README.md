@@ -168,7 +168,7 @@ hello-world  latest    d2c94e258dcb   17 months ago  13.3kB
   <img src="https://github.com/exeleron07/docker-web/blob/66b51e3aa9ba670ec621a07d7800030264c6849f/img/11.png" alt="Header">
 </p>
 
-Создаём директорию mydocker, переходим в неё и после чего редактируем файл через nano
+Создаём директорию mydocker, переходим в неё и после чего редактируем файл через nano и вставляем код, который был в начале (продублирую ниже также):
 
 ```bash
 mkdir mydocker
@@ -176,4 +176,13 @@ cd mydocker
 nano Dockerfile
 ```
 
+```Dockerfile
+FROM ubuntu:16.04
+
+RUN apt-get -y update
+RUN apt-get -y install apache2
+RUN echo 'Hello World from Docker!' > /var/www/html/index.html
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+EXPOSE 80
+```
 
