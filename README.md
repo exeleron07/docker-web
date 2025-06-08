@@ -19,7 +19,10 @@
 ## Пример Dockerfile (NGINX)
 
 ```Dockerfile
+#базовый образ (последняя стабильная версия Nginx из официального репозитория)
 FROM nginx:latest
+
+#добавляет строку "New Version v2" в конец стандартного файла index.html Nginx
 RUN echo "New Version v2" >> /usr/share/nginx/html/index.html
 ```
 
@@ -30,16 +33,20 @@ RUN echo "New Version v2" >> /usr/share/nginx/html/index.html
 ## Пример Dockerfile (Apache)
 
 ```Dockerfile
-# Dockerfile to build Docker Image of Apache WebServer running on Ubuntu
+# Dockerfile создает образ на основе Ubuntu 16.04 с веб-сервером Apache2, который отображает простое сообщение "Hello World from Docker!"
 
+#базовый образ, на основе которого строится контейнер (в данном случае Ubuntu 16.04)
 FROM ubuntu:16.04
 
+#обновление списка пакетов (выполняется внутри контейнера)
 RUN apt-get -y update
+#установка веб-сервера Apache2 (флаг -y автоматически подтверждает установку)
 RUN apt-get -y install apache2
-
+#создает файл index.html с простым содержимым в стандартной директории Apache
 RUN echo 'Hello World from Docker!' > /var/www/html/index.html
-
+#команда, которая будет выполнена при запуске контейнера (запуск Apache в foreground режиме)
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+#указывает, что контейнер прослушивает 80 порт (но не открывает его автоматически на хосте)
 EXPOSE 80
 ```
 
