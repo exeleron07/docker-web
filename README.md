@@ -185,4 +185,16 @@ RUN echo 'Hello World from Docker!' > /var/www/html/index.html
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
 ```
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/f7dac3e3e907136cd5d23d19ec7e74a200282a7d/img/12.png" alt="Header">
+</p>
+<p align="center">
+  <img src="https://github.com/exeleron07/docker-web/blob/f7dac3e3e907136cd5d23d19ec7e74a200282a7d/img/13.png" alt="Header">
+</p>
 
+Команда docker build -t vlad:v1 . собирает Docker-образ из текущей директории и присваивает ему имя (vlad) и тег (v1). Команда docker run -d -p 7777:80 vlad:v1 запускает контейнер из вашего собственного образа vlad:v1 в фоновом режиме с пробросом порта.
+
+```bash
+docker build -t vlad:v1
+docker run -d -p 7777:80 vlad:v1
+```
